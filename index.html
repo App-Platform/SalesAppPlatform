@@ -135,8 +135,7 @@ $(function() {
 			$("#form2")[0].reset();
 		}
 	);
-}); 
-	
+});
 </script>
 
 </head> 
@@ -151,7 +150,7 @@ $(function() {
 	<div data-role="navbar" data-iconpos="top">
 		<ul>
 			<li><a href="#home" data-icon="home">Home</a></li>
-			<li><a data-icon="grid" onClick="document.location.href='#examples';startActivity(getIntent()); finish();">Examples</a></li>
+			<li><a data-icon="grid" onClick="document.location.href='#examples';doRefresh()">Examples</a></li>
 			<li><a href="#sales" data-icon="star">Sales</a></li>
 		</ul>
 	</div><!-- /navbar -->  
@@ -425,7 +424,7 @@ $(function() {
 
 		<p>
         <strong>App Screenshots</strong>
-        <div id="gallery_1"></div>
+        <div id="gallery_1" class="gallery_1"></div>
         <hr width="100%" style="visibility:hidden;">
         <br />
         <br />
