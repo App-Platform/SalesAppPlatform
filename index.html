@@ -13,39 +13,14 @@
 <link rel="stylesheet" href="css/theme.css" />
 <link rel="stylesheet" href="css/app-platform.css" />
 
-<!-- iOS -->
-<meta name="apple-mobile-web-app-title" content="App-Platform.net">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-<!-- iPhone -->
-<link href="icons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
-<link href="icons/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
-
-<!-- iPhone (Retina) -->
-<link href="icons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
-<link href="icons/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-
-<!-- iPhone 5 -->
-<link href="icons/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-
-<!-- iPad -->
-<link href="icons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
-<link href="icons/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
-<link href="icons/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
-
-<!-- iPad (Retina) -->
-<link href="icons/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
-<link href="icons/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-<link href="icons/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
 <!-- Add jQuery -->
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
 
-<!-- Add PhoneGap 
+<!-- Add PhoneGap -->
+
 <script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript" src="childbrowser.js"></script>
--->
 
 <!-- Call jQuery Mobile -->
 <script type="text/javascript" src="scripts/jquery.mobile-1.2.0.min.js"></script>
@@ -111,7 +86,6 @@ $(function() {
 		
 				$.ajax({
 				type: "POST",
-				//url: "scripts/formUBC.php",
 				url: "http://sales.app-platform.net/scripts/formUBC.php",
 				data: data,
 				success: function(){
@@ -129,7 +103,6 @@ $(function() {
 		
 				$.ajax({
 				type: "POST",
-				//url: "scripts/formCIC.php",
 				url: "http://sales.app-platform.net/scripts/formCIC.php",
 				data: data,
 				success: function(){
@@ -174,15 +147,19 @@ $(function() {
 <div data-role="page" data-theme="a" id="home"> 
   <div data-role="header" data-theme="a" align="center">
     <img src="structure/logo.png" alt="logo">
-  </div>
+    <a href="#help" data-rel="popup" data-position-to="window" data-transition="pop" data-icon="alert" class="ui-btn-right">Help</a>
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a data-icon="grid" onClick="document.location.href='#examples';document.location.reload(true);return false">Examples</a></li>
+			<li><a href="#sales" data-icon="star">Sales</a></li>
+		</ul>
+	</div><!-- /navbar -->  
+    </div>
   
 	<div data-role="content">
    	  	<p>
 
-        <div align="center">
-        <a id="body" href="#help" data-rel="popup" data-position-to="window" data-transition="pop">How does this work?</a><br />
-        </div>
-        
         <!-- Help Popup-->
         <div data-role="popup" id="help" data-overlay-theme="b" data-theme="a" style="max-width:500px;" class="ui-corner-all">
         
@@ -226,36 +203,23 @@ $(function() {
 
 <div class="content-secondary">
         
-		<br />
-        
-        <!-- mailto generator http://shadow2531.com/js/mailtouri.html -->
   		<a href="mailto:?cc=info%40app-platform.net&subject=You've%20been%20referred%20to%20App-Platform.net&body=You're%20being%20referred%20to%20App-Platform.net%3B%20offering%20mobile%20web%20applications%20and%20design.%0D%0A%0D%0AApp-Platform.net's%20Ultimate%20Business%20Card%20App%2C%20an%20unlimited%2C%20trackable%2C%20business%20card%2C%20works%20like%20a%20never%20ending%20referral%20source%20for%20you.%20Whether%20you%20or%20a%20referral%20partner%20are%20giving%20out%20your%20information%2C%20you%20can%20now%20track%20who%20gave%20out%20your%20information%20and%20you'll%20always%20get%20the%20email%20address%20of%20the%20person%20being%20referred%20to%20you.%0D%0A%0D%0AApp-Platform.net%20is%20also%20offering%20a%20mobile%20solution%20for%20all%20your%20Information%20Capturing%20needs%20with%20the%20Custom%20Info%20Capture%20App!%20This%20custom%20application%20allows%20you%20to%20be%20sure%20to%20capture%20all%20the%20information%20you%20need%20while%20you're%20in%20the%20field%20or%20with%20a%20client.%20Whatever%20your%20needs%2C%20we%20can%20design%20and%20deploy%20an%20app%20that's%20right%20for%20you.%0D%0A%0D%0AContact%20us%20today%20by%20replying%20to%20this%20email%20or%20using%20the%20form%20on%20our%20website%2C%20App-Platform.net.%20We%20can%20schedule%20a%20meeting%20by%20phone%20or%20in%20person%2C%20whenever%20is%20convenient%20for%20you%2C%20and%20discuss%20all%20the%20ways%20we%20can%20help%20with%20your%20business!%0D%0A%0D%0AThank%20you!%0D%0A%0D%0Ahttp%3A%2F%2Fapp-platform.net" target="_blank" data-role="button" data-icon="email" data-transition="slide">Email Referral</a>
   		<a href="mailto:?cc=info%40app-platform.net&subject=Get%20the%20App-Platform.net%20App!&body=Get%20the%20App-Platform.net%20App%20at%20http%3A%2F%2Fapp.app-platform.net." target="_blank" data-role="button" data-icon="email" data-transition="slide">Send App-Platform app</a>
         
-    <br />
+    	<br />
         <br />
 
     	<strong>Contact</strong>
         <a href="tel:8885590902" data-role="button" data-icon="phone">(888) 559-0902</a>
         <a href="mailto:info@app-platform.net" target="_blank" data-role="button" data-icon="email">info@app-platform.net</a>
-        <a href="http://app-platform.net" rel="external" data-role="button" data-icon="home" target="_blank">www.app-platform.net</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="home" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://app-platform.net');">www.app-platform.net</a>
-        -->
-        <a href="http://www.facebook.com/AppPlatformnet" rel="external" data-role="button" data-icon="facebook" target="_blank">facebook</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="facebook" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://www.facebook.com/AppPlatformnet');">facebook</a>
-        -->
-        <a href="http://www.linkedin.com/company/2779772" rel="external" data-role="button" data-icon="linkedin" target="_blank">linkedin</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="linkedin" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://www.linkedin.com/company/2779772');">linkedIn</a>
-        -->
 </div>
 <div class="content-primary">
-        
-        <br />
-        <br />
-        
+
+    	<br />
+
         <strong>Info</strong>
         
         <div data-role="collapsible" data-collapsed="true">
@@ -351,56 +315,199 @@ $(function() {
         <br />
         <br />
 
+</div>
+        </p>
+  </div> 
+    
+  <div data-role="footer" data-theme="a">
+    <div class="footerText" align="center" style="margin-top:15px; margin-bottom:15px;">
+		<script type="text/javascript"> 
+            copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; "+ update + " Jim Hunkins Enterprises");
+        </script>
+        <br /><br />
+        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+      </div>
+    </div> 
+</div>
+
+
+
+
+<!-- Examples -->
+<div data-role="page" data-theme="a" id="examples"> 
+  <div data-role="header" data-theme="a" align="center">
+    <img src="structure/logo.png" alt="logo">
+    <a href="#help" data-rel="popup" data-position-to="window" data-transition="pop" data-icon="alert" class="ui-btn-right">Help</a>
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a data-icon="grid" onClick="document.location.href='#examples';document.location.reload(true);return false">Examples</a></li>
+			<li><a href="#sales" data-icon="star">Sales</a></li>
+		</ul>
+	</div><!-- /navbar -->  
+    </div>
+  
+	<div data-role="content">
+   	  	<p>
+
+        <!-- Help Popup-->
+        <div data-role="popup" id="help" data-overlay-theme="b" data-theme="a" style="max-width:500px;" class="ui-corner-all">
+        
+            <div data-role="header" data-theme="a" align="center">
+                <img src="structure/logo2.png" alt="logo">
+            </div>
+        
+            <div data-role="content" style="background-color:#fff;">	
+                <h2>How does this work?</h2> 
+                <p style="font-size:12px">
+                <strong>Send a referral</strong><br>
+                Tap the Email Referral button and an email will be generated with information about App-Platform.net. Whoever is entered into the To: will receive the information, and App-Platform.net will have both your email address and your referral's email address for tracking purposes.<br />
+                <br />
+                <strong>Send this app</strong><br />
+                Tap the Send this app button to generate an email with a link for downloading this very app!<br />
+				<br />
+				<strong>Contact</strong><br />
+				The buttons under the Contact heading allow for contact with App-Platform.net, including email, our website and our facebook page.<br />
+				<br />
+				<strong>Info</strong><br />
+				The buttons under the Info heading include expandable information for our products and services.<br />
+				<br />
+				<strong>App Examples</strong><br />
+				The buttons under App Examples include examples of several of our apps in action. These are weblinks to the live apps online as well as the instructional landing page for each. They provide an excellent reference for a potential customer to see our applications in action.<br />
+				<br />
+				<strong>Get Started on Your App!</strong><br />
+				The buttons under Get Started on Your App! includes an expandable form for a potential client to enter all of their information to get their own custom application. Follow the instructions in the form and capture all of the necessary data for best results.<br />
+				<br />
+				<strong>App Screenshots</strong><br />
+				This should be pretty self explanatory. The icons under this are a web gallery that shows screen shots from some of our completed apps.<br />
+				<br />
+				<strong>Get Your Own App</strong><br />
+				This button sends and email request for more information about getting your own app. It's semi-redundant, but is included in all of our apps.
+                </p>
+            </div>
+            
+            <div data-role="footer" align="center">
+                <a href="#" data-role="button" data-inline="true" data-theme="a" data-rel="back" data-icon="delete" style="margin-top:10px; margin-bottom:10px;">Close Window</a>
+            </div>
+        </div>
+
+<div class="content-primary">
+        
         <strong>Ultimate Business Card App examples</strong>
         
-        <div data-role="controlgroup">
-        <a href="http://joeytork.app-platform.net/webapp.htm" rel="external" data-role="button" data-icon="info" target="_blank">Joey Torkildson</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://joeytork.app-platform.net/webapp.htm');">Joey Torkildson</a>
-        -->
-        <a href="http://joeytork.app-platform.net" rel="external" data-role="button" data-icon="info" target="_blank">Landing Page</a>
-        <!-- Phonegap external link
-        <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://joeytork.app-platform.net');">Landing Page</a>
-        -->
-        </div>
         
-        <a href="http://serenebodytherapy.com/app/webapp.htm" rel="external" data-role="button" data-icon="info" target="_blank">Serene Body Therapy</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://serenebodytherapy.com/app/webapp.htm');">Serene Body Therapy</a>
-        -->
 
-        <a href="http://pyxissolutions.com/app/webapp.htm" rel="external" data-role="button" data-icon="info" target="_blank">Pyxis Solutions</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/app/webapp.htm');">Pyxis Solutions</a>
-        -->
         
         <br />
         <br />
         
         <strong>Custom Info Capture App examples</strong>
         
-        <a href="http://app-platform.net/sicora/webapp.htm" rel="external" data-role="button" data-icon="info" target="_blank">Sicora</a>
-        <!-- Phonegap external link
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://app-platform.net/sicora/webapp.htm');">Sicora</a>
-        -->
-
-</div>        
-<div class="content-secondary">
-
+        
+        <br />
+        <br />
+        
+        <strong>Landing Page examples</strong>
+        
+        <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://joeytork.app-platform.net');">Joey Trokildson</a>
+        
+        <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/app/');">Pyxis Solutions</a>
+        
         <br />
         <br />
        
+</div>        
+<div class="content-secondary">
+
 		<p>
         <strong>App Screenshots</strong>
         <div id="gallery_1"></div>
-        
         <hr width="100%" style="visibility:hidden;">
         <br />
         <br />
 
 
 </div>
-<div class="content-primary">
+
+        </p>
+  </div> 
+    
+  <div data-role="footer" data-theme="a">
+    <div class="footerText" align="center" style="margin-top:15px; margin-bottom:15px;">
+		<script type="text/javascript"> 
+            copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; "+ update + " Jim Hunkins Enterprises");
+        </script>
+        <br /><br />
+        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+      </div>
+    </div> 
+</div>
+
+
+
+
+<!-- Sales -->
+<div data-role="page" data-theme="a" id="sales"> 
+  <div data-role="header" data-theme="a" align="center">
+    <img src="structure/logo.png" alt="logo">
+    <a href="#help" data-rel="popup" data-position-to="window" data-transition="pop" data-icon="alert" class="ui-btn-right">Help</a>
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a data-icon="grid" onClick="document.location.href='#examples';document.location.reload(true);return false">Examples</a></li>
+			<li><a href="#sales" data-icon="star">Sales</a></li>
+		</ul>
+	</div><!-- /navbar -->  
+    </div>
+  
+	<div data-role="content">
+   	  	<p>
+
+        <!-- Help Popup-->
+        <div data-role="popup" id="help" data-overlay-theme="b" data-theme="a" style="max-width:500px;" class="ui-corner-all">
+        
+            <div data-role="header" data-theme="a" align="center">
+                <img src="structure/logo2.png" alt="logo">
+            </div>
+        
+            <div data-role="content" style="background-color:#fff;">	
+                <h2>How does this work?</h2> 
+                <p style="font-size:12px">
+                <strong>Send a referral</strong><br>
+                Tap the Email Referral button and an email will be generated with information about App-Platform.net. Whoever is entered into the To: will receive the information, and App-Platform.net will have both your email address and your referral's email address for tracking purposes.<br />
+                <br />
+                <strong>Send this app</strong><br />
+                Tap the Send this app button to generate an email with a link for downloading this very app!<br />
+				<br />
+				<strong>Contact</strong><br />
+				The buttons under the Contact heading allow for contact with App-Platform.net, including email, our website and our facebook page.<br />
+				<br />
+				<strong>Info</strong><br />
+				The buttons under the Info heading include expandable information for our products and services.<br />
+				<br />
+				<strong>App Examples</strong><br />
+				The buttons under App Examples include examples of several of our apps in action. These are weblinks to the live apps online as well as the instructional landing page for each. They provide an excellent reference for a potential customer to see our applications in action.<br />
+				<br />
+				<strong>Get Started on Your App!</strong><br />
+				The buttons under Get Started on Your App! includes an expandable form for a potential client to enter all of their information to get their own custom application. Follow the instructions in the form and capture all of the necessary data for best results.<br />
+				<br />
+				<strong>App Screenshots</strong><br />
+				This should be pretty self explanatory. The icons under this are a web gallery that shows screen shots from some of our completed apps.<br />
+				<br />
+				<strong>Get Your Own App</strong><br />
+				This button sends and email request for more information about getting your own app. It's semi-redundant, but is included in all of our apps.
+                </p>
+            </div>
+            
+            <div data-role="footer" align="center">
+                <a href="#" data-role="button" data-inline="true" data-theme="a" data-rel="back" data-icon="delete" style="margin-top:10px; margin-bottom:10px;">Close Window</a>
+            </div>
+        </div>
+
 
         <strong>Get Started on Your App!</strong>
         
@@ -665,10 +772,7 @@ $(function() {
         <a href="mailto:?cc=info%40app-platform.net&subject=Ultimate%20Business%20Card%20App%20from%20App-Platform.net&body=App-Platform.net%0D%0A%0D%0A%0D%0AUltimate%20Business%20Card%20App%20%2B%201st%20year%20of%20Hosting%20on%20App-Platform.net%20%24410%0D%0A(App%20%24350%20%2B%201st%20Year%20of%20Hosting%20%2460%20%3D%20%24410)%0D%0A%0D%0APay%20by%20Check%3A%0D%0APlease%20make%20checks%20payable%20to%0D%0AJim%20Hunkins%20Enterprises%0D%0A548%2012th%20Ave%20NW%0D%0ANew%20Brighton%2C%20MN%2055112%0D%0A%0D%0APay%20Online%3A%0D%0AClick%20the%20following%20link%2C%0D%0Ahttps%3A%2F%2Fwww.paypal.com%2Fcgi-bin%2Fwebscr%3Fcmd%3D_s-xclick%26hosted_button_id%3DYPPVCB8DS4MDJ%0D%0A%0D%0AThe%20hosting%20will%20be%20billed%20yearly%20at%20the%20beginning%20of%20the%20month%20the%20first%20payment%20was%20taken.%20%0D%0AIf%20you%20are%20having%20difficultly%20or%20have%20questions%20about%20billing%20please%20contact%20us%20at%20support%40app-platform.net." target="_blank" data-role="button" data-inline="true" data-icon="email" data-transition="slide">Send Invoice $410</a><br />
         </p>
 
-  </div>
-  
-  
-  
+  		</div>
 
 
         <div data-role="collapsible" data-collapsed="true">
@@ -1006,11 +1110,11 @@ $(function() {
         <br />
         </p>
 
-  </div>
+  		</div>
+        
+        
+        <br />
 
-  
-  
-  
   
         <div data-role="collapsible" data-collapsed="true">
         <h2>Payment Options</h2>
@@ -1041,11 +1145,10 @@ $(function() {
         </p>
         </div>
 	
-</div>
 
         </p>
   </div> 
-    
+   
   <div data-role="footer" data-theme="a">
     <div class="footerText" align="center" style="margin-top:15px; margin-bottom:15px;">
 		<script type="text/javascript"> 
