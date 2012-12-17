@@ -62,8 +62,8 @@ $(document).bind('pageshow', function() {
 
 <script type="text/javascript">
 
-  $(document).bind('pageshow', function() {
-	var settings = {
+	 $(document).one('pageshow', '#examples', function () {
+	  var settings = {
 	  username: 'jimhunkinsent',
 	  maxresults: 50,
 	  mode: 'album',
@@ -75,6 +75,7 @@ $(document).bind('pageshow', function() {
   });
 
 </script>
+
 
 <!-- Form Validation -->
 <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
@@ -151,7 +152,7 @@ $(function() {
 	<div data-role="navbar" data-iconpos="top">
 		<ul>
 			<li><a href="#home" data-icon="home">Home</a></li>
-			<li><a data-icon="grid" onClick="document.location.href='#examples';">Examples</a></li>
+			<li><a href="#examples" data-icon="grid">Examples</a></li>
 			<li><a href="#sales" data-icon="star">Sales</a></li>
 		</ul>
 	</div><!-- /navbar -->  
