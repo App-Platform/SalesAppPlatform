@@ -61,32 +61,17 @@
             </div>
         
             <div data-role="content" class="help">	
-                <h2>How does this work?</h2> 
-                <p>
-                <strong>Send a referral</strong><br>
-                Tap the Email Referral button and an email will be generated with information about App-Platform.net. Whoever is entered into the To: will receive the information, and App-Platform.net will have both your email address and your referral's email address for tracking purposes.<br />
-                <br />
-                <strong>Send this app</strong><br />
-                Tap the Send this app button to generate an email with a link for downloading this very app!<br />
-				<br />
-				<strong>Contact</strong><br />
-				The buttons under the Contact heading allow for contact with App-Platform.net, including email, our website and our facebook page.<br />
-				<br />
-				<strong>Info</strong><br />
-				The buttons under the Info heading include expandable information for our products and services.<br />
-				<br />
-				<strong>App Examples</strong><br />
-				The buttons under App Examples include examples of several of our apps in action. These are weblinks to the live apps online as well as the instructional landing page for each. They provide an excellent reference for a potential customer to see our applications in action.<br />
-				<br />
-				<strong>Get Started on Your App!</strong><br />
-				The buttons under Get Started on Your App! includes an expandable form for a potential client to enter all of their information to get their own custom application. Follow the instructions in the form and capture all of the necessary data for best results.<br />
-				<br />
-				<strong>App Screenshots</strong><br />
-				This should be pretty self explanatory. The icons under this are a web gallery that shows screen shots from some of our completed apps.<br />
-				<br />
-				<strong>Get Your Own App</strong><br />
-				This button sends and email request for more information about getting your own app. It's semi-redundant, but is included in all of our apps.
-                </p>
+                <h2>How does this work?</h2>
+                <p><strong>Send a referral</strong><br>
+                Tap the &quot;Email Referral&quot; button and enter the email address of the person you want to refer into the &quot;Referral Email&quot; field, enter your name into the &quot;Your Name&quot; field and if you would like to include any other information enter it into the &quot;Message&quot; field. Once you are done tap the &quot;Submit&quot; button and an email will be sent to the email address provided. An email alert will also be sent to App-Platform.net for tracking purposes.</p>
+                <p><strong>Send this app</strong><br>
+                Tap the &quot;Send this app&quot; button and enter the email address of the person you want to send the app into the &quot;Email&quot; field and enter your name into the &quot;Your Name&quot; field. Once you are done tap the &quot;Submit&quot; button and an email will a link to the apps Landing Page be sent to the email address provided. An email alert will also be sent to App-Platform.net for tracking purposes.</p>
+                <p><strong>Contact</strong><br>
+                The buttons under the Contact heading allow for contact with App-Platform.net, including email, our website and our facebook page.</p>
+                <p><strong>App Examples</strong><br>
+                The buttons under App Examples include examples of several of our apps in action. These are weblinks to the live apps online. The  apps will be running in your devices web browser however the experience will be  approximately the same as if the app were installed on your device. </p>
+                <p><strong>Get Your Own App</strong><br>
+                Tap the &quot;Get your own app!&quot; button and enter the email address of the person interested in getting more information about apps from App-Platform.net in the &quot;Email&quot; field. Once you are done tap the &quot;Check&quot; button and a representative   of App-Platform.net will be in touch.</p>
             </div>
             
             <div data-role="footer" align="center">
@@ -97,9 +82,46 @@
 <div style="margin-bottom:2em;"></div>
 
 <div class="container_12">
-    <div class="grid_4 ui-block960-a">
-  		<a href="mailto:?cc=info%40app-platform.net&subject=You've%20been%20referred%20to%20App-Platform.net&body=You're%20being%20referred%20to%20App-Platform.net%3B%20offering%20mobile%20web%20applications%20and%20design.%0D%0A%0D%0AApp-Platform.net's%20Ultimate%20Business%20Card%20App%2C%20an%20unlimited%2C%20trackable%2C%20business%20card%2C%20works%20like%20a%20never%20ending%20referral%20source%20for%20you.%20Whether%20you%20or%20a%20referral%20partner%20are%20giving%20out%20your%20information%2C%20you%20can%20now%20track%20who%20gave%20out%20your%20information%20and%20you'll%20always%20get%20the%20email%20address%20of%20the%20person%20being%20referred%20to%20you.%0D%0A%0D%0AApp-Platform.net%20is%20also%20offering%20a%20mobile%20solution%20for%20all%20your%20Information%20Capturing%20needs%20with%20the%20Custom%20Info%20Capture%20App!%20This%20custom%20application%20allows%20you%20to%20be%20sure%20to%20capture%20all%20the%20information%20you%20need%20while%20you're%20in%20the%20field%20or%20with%20a%20client.%20Whatever%20your%20needs%2C%20we%20can%20design%20and%20deploy%20an%20app%20that's%20right%20for%20you.%0D%0A%0D%0AContact%20us%20today%20by%20replying%20to%20this%20email%20or%20using%20the%20form%20on%20our%20website%2C%20App-Platform.net.%20We%20can%20schedule%20a%20meeting%20by%20phone%20or%20in%20person%2C%20whenever%20is%20convenient%20for%20you%2C%20and%20discuss%20all%20the%20ways%20we%20can%20help%20with%20your%20business!%0D%0A%0D%0AThank%20you!%0D%0A%0D%0Ahttp%3A%2F%2Fapp-platform.net" target="_blank" data-role="button" data-icon="email" data-transition="slide">Email Referral</a>
-  		<a href="mailto:?cc=info%40app-platform.net&subject=Get%20the%20App-Platform.net%20App!&body=Get%20the%20App-Platform.net%20App%20at%20http%3A%2F%2Fapp.app-platform.net." target="_blank" data-role="button" data-icon="email" data-transition="slide">Send App-Platform app</a>
+    <div class="grid_5 ui-block960-a">
+        <!-- Email referral -->
+        <a id="emailRefBtn" href="" target="_blank" data-role="button" data-icon="email">Email Referral</a>
+        <form id="emailReferral" class="emailReferral" method="post" data-ajax="false" style="display:none; padding-left:10px; padding-right:10px; padding-bottom:20px;">
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Email">Referral Email</label>
+          <input type="text" name="Email" id="Email" value="" placeholder="Referral Email" class="required email" data-mini="true" />
+        </div>
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Name">Your Name</label>
+          <input type="text" name="Name" id="Name" value="" placeholder="Your Name" data-mini="true" class="required" />
+        </div>
+        <label for="Message"><span class="smallText">Message (optional)</span></label>
+        <textarea name="Message" id="Message" style="background:#ffffff;" data-mini="true"></textarea>
+        
+        <div data-role="controlgroup" data-type="horizontal" style="margin-left:-10px;">
+        <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-icon="check" />
+        <a href="#help" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" data-mini="true" data-icon="alert">Help</a>
+        <a id="emailRefReset" href="" data-role="button" data-inline="true" data-mini="true" data-icon="delete">Clear</a>
+        </div>
+        </form><!-- /email referral -->
+        
+        <!-- Send this app -->
+        <a id="sendAppBtn" href="" target="_blank" data-role="button" data-icon="email">Send this app</a>
+        <form id="sendApp" class="sendApp" method="post" data-ajax="false" style="display:none; padding-left:10px; padding-right:10px; padding-bottom:20px;">
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Email">Email</label>
+          <input type="text" name="Email" id="Email" value="" placeholder="Email" class="required email" data-mini="true" />
+        </div>
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Name">Your Name</label>
+          <input type="text" name="Name" id="Name" value="" placeholder="Your Name" data-mini="true" class="required" />
+        </div>
+        
+        <div data-role="controlgroup" data-type="horizontal" style="margin-left:-10px;">
+        <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-icon="check" />
+        <a href="#help" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" data-mini="true" data-icon="alert">Help</a>
+        <a id="sendAppReset" href="" data-role="button" data-inline="true" data-mini="true" data-icon="delete">Clear</a>
+        </div>
+        </form><!-- /send this app -->
 
     	<p><br /><strong>Contact</strong></p>
         <a href="tel:8885590902" data-role="button" data-icon="phone">(888) 559-0902</a>
@@ -109,7 +131,7 @@
         <a data-role="button" data-icon="linkedin" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://www.linkedin.com/company/2779772');">linkedIn</a>
     	<div style="margin-bottom:2em;"></div>
 	</div><!-- /block a -->
-    <div class="grid_8 ui-block960-b">
+    <div class="grid_7 ui-block960-b">
         <p><strong>Info</strong></p>
         
         <div data-role="collapsible" data-collapsed="true">
@@ -208,10 +230,24 @@
     
 <div data-role="footer" data-theme="a">
     <div class="footerText" align="center">
-		<p><script type="text/javascript"> 
-			copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " App-Platform.net");
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn" href="" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp" class="getYourOwnApp" method="post" data-ajax="false" style="display:none;">
+        <div style="margin-left:auto; margin-right:auto; max-width:350px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label" style="margin-left:30px; float:left;">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" value="" placeholder="Email" class="required email" data-mini="true" style="width:200px;" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" style="margin-top:10px; float:left;">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-iconpos="notext" data-icon="check" />
+            <a id="getYourOwnAppReset" href="" data-role="button" data-inline="true" data-mini="true" data-iconpos="notext" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+        <p><script type="text/javascript">
+            copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; "+ update + " App-Platform.net");
         </script></p>
-        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
     </div>
 </div><!-- /footer -->
 </div><!-- /home -->
@@ -284,9 +320,6 @@
         <p><br /><strong>Custom Info Capture App examples</strong></p>
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://app-platform.net/sicora/webapp.htm');">Sicora</a>
         
-        <p><br /><strong>Landing Page examples</strong></p>
-        <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://joeytork.app-platform.net');">Joey Trokildson</a>
-        <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/app/');">Pyxis Solutions</a>
     </div><!-- /block a -->     
     <div class="grid_6 ui-block960-b">
 		<p><br /><strong>App Screenshots</strong></p>
@@ -298,10 +331,24 @@
     
 <div data-role="footer" data-theme="a">
     <div class="footerText" align="center">
-    <p><script type="text/javascript"> 
-        copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " App-Platform.net");
-    </script></p>
-    <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn2" href="" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp2" class="getYourOwnApp2" method="post" data-ajax="false" style="display:none;">
+        <div style="margin-left:auto; margin-right:auto; max-width:350px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label" style="margin-left:30px; float:left;">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" value="" placeholder="Email" class="required email" data-mini="true" style="width:200px;" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" style="margin-top:10px; float:left;">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-iconpos="notext" data-icon="check" />
+            <a id="getYourOwnAppReset2" href="" data-role="button" data-inline="true" data-mini="true" data-iconpos="notext" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+		<p><script>
+            copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; "+ update + " App-Platform.net");
+        </script></p>
     </div>
 </div><!-- /footer -->
 </div><!-- /examples -->
@@ -977,10 +1024,24 @@
    
 <div data-role="footer" data-theme="a">
     <div class="footerText" align="center">
-    <p><script type="text/javascript"> 
-        copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " App-Platform.net");
-    </script></p>
-    <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn3" href="" target="_blank" data-role="button" data-theme="a" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp3" class="getYourOwnApp3" method="post" data-ajax="false" style="display:none;">
+        <div style="margin-left:auto; margin-right:auto; max-width:350px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label" style="margin-left:30px; float:left;">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" value="" placeholder="Email" class="required email" data-mini="true" style="width:200px;" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" style="margin-top:10px; float:left;">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-iconpos="notext" data-icon="check" />
+            <a id="getYourOwnAppReset3" href="" data-role="button" data-inline="true" data-mini="true" data-iconpos="notext" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+		<p><script>
+            copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; "+ update + " App-Platform.net");
+        </script></p>
     </div>
 </div><!-- /footer -->
 </div><!-- /sales -->
@@ -1067,6 +1128,105 @@ $(function() {
 		}
 	);
 }); 
+</script>
+
+<!-- Email Referral Validation -->
+<script type="text/javascript">
+$(function() {
+    $( "#emailReferral" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+        
+                $.ajax({
+                type: "POST",
+                url: "http://app.app-platform.net/php/emailReferral.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+</script>
+
+<!-- Send App Validation -->
+<script type="text/javascript">
+$(function() {
+    $( "#sendApp" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+        
+                $.ajax({
+                type: "POST",
+                url: "http://app.app-platform.net/php/sendApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+</script>
+
+<!-- Get Your Own App Validation -->
+<script type="text/javascript">
+$(function() {
+    $( "#getYourOwnApp" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+        
+                $.ajax({
+                type: "POST",
+                url: "http://app.app-platform.net/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+
+$(function() {
+    $( "#getYourOwnApp2" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+        
+                $.ajax({
+                type: "POST",
+                url: "http://app.app-platform.net/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+}); 
+
+$(function() {
+    $( "#getYourOwnApp3" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+        
+                $.ajax({
+                type: "POST",
+                url: "http://app.app-platform.net/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
 </script>
 
 </body>

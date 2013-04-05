@@ -1,3 +1,70 @@
+<!-- Email referral button -->
+$(function() {
+  $("#emailRefBtn").toggle(
+  function(){
+     $("#emailReferral").show(); 
+  },
+  function(){
+      $("#emailReferral").hide(); $("#emailReferral")[0].reset();
+  }); 
+});
+
+$(function() { $('#emailRefReset').click( function() { $("#emailReferral")[0].reset(); });});
+
+
+
+<!-- Send App button -->
+$(function() {
+  $("#sendAppBtn").toggle(
+  function(){
+     $("#sendApp").show(); 
+  },
+  function(){
+      $("#sendApp").hide(); $("#sendApp")[0].reset();
+  }); 
+});
+
+$(function() { $('#sendAppReset').click( function() { $("#sendApp")[0].reset(); });});
+
+
+<!-- Get Your Own App button -->
+$(function() {
+  $("#getYourOwnAppBtn").toggle(
+  function(){
+     $("#getYourOwnApp").show(); 
+  },
+  function(){
+      $("#getYourOwnApp").hide(); $("#getYourOwnApp")[0].reset();
+  }); 
+});
+
+$(function() { $('#getYourOwnAppReset').click( function() { $("#getYourOwnApp")[0].reset(); });});
+
+$(function() {
+  $("#getYourOwnAppBtn2").toggle(
+  function(){
+     $("#getYourOwnApp2").show(); 
+  },
+  function(){
+      $("#getYourOwnApp2").hide(); $("#getYourOwnApp2")[0].reset();
+  }); 
+});
+
+$(function() { $('#getYourOwnAppReset3').click( function() { $("#getYourOwnApp3")[0].reset(); });});
+
+$(function() {
+  $("#getYourOwnAppBtn3").toggle(
+  function(){
+     $("#getYourOwnApp3").show(); 
+  },
+  function(){
+      $("#getYourOwnApp3").hide(); $("#getYourOwnApp3")[0].reset();
+  }); 
+});
+
+$(function() { $('#getYourOwnAppReset3').click( function() { $("#getYourOwnApp3")[0].reset(); });});
+
+
 /*!
  * Add to Homescreen v2.0.1 ~ Copyright (c) 2012 Matteo Spinelli, http://cubiq.org
  * Released under MIT license, http://cubiq.org/license
@@ -360,4 +427,4 @@ $(document).bind('pageshow', function() {
 
 $(function() {
     $('input, textarea').placeholder();
-    });
+});
