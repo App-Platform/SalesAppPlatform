@@ -32,6 +32,17 @@
 <!-- Add PhoneGap -->
 <script type="text/javascript" src="phonegap.js"></script>
 
+<!-- Slideshow -->
+<link rel="stylesheet" href="slideshow/flexslider.css" type="text/css">
+<script type="text/javascript" src="slideshow/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
+<!-- /Slideshow -->
+
 </head> 
 
 <body>
@@ -84,6 +95,24 @@
     </div><!-- /help -->
 
 <div style="margin-bottom:2em;"></div>
+<!-- Slideshow -->    
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+          <img src="slideshow/slides/slide-03.jpg" />
+          <p class="flex-caption">Brand yourself. Share yourself. Get referrals.</p>
+        </li>
+        <li>
+          <img src="slideshow/slides/slide-02.jpg" />
+          <p class="flex-caption">Make your work flow mobile.</p>
+        </li>
+        <li>
+          <img src="slideshow/slides/slide-01.jpg" />
+          <p class="flex-caption">Custom mobile websites. Mobilize existing websites.</p>
+        </li>
+      </ul>
+    </div>
+<!-- /Slideshow -->
 
 <div class="container_12">
     <div class="grid_5 ui-block960-a">
